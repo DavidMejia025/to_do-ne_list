@@ -1,0 +1,39 @@
+body{
+	font-family: 'Indie Flower', cursive;
+	color: #286090;
+	font-size: 24px;
+}
+
+li {
+	font-size: 18px;
+}
+i.glyphicon-remove {
+  color: red;
+  float: right;
+}
+
+i.glyphicon-ok {
+  color: orange;
+  float: right;
+  margin-right: 20px;
+}
+
+select{
+width: 360px;
+}
+.done_container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+}
+
+#category{
+  border-radius: 25px;
+  font-size:13px;
+  background-color: white;
+  display:block;
+}
+
+.date{
+  margin:20px !important;
+}

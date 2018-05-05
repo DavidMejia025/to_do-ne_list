@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1> Deif To do Lists:</h1>
+      <h1>Create new To Do list:</h1>
+          <form action="todo", id="new_to_do",
+          " method="POST">
+            <div class="form-group">
+              <input class= "form-control" type="text" placeholder="Name" name=todo[name]>
+            </div>
+            <div class="form-group">
+              <input class="btn btn-primary btn-block" type="submit" value="Create">
+            </div>
+          </form>
+       <table class="table">
+        <thead>
+          <th>Name</th>
+        </thead>
+        <tbody>
+          <% @todos.each do |todo| %>
+            <tr>
+              <td> <a href="/todo/<%= todo.id %>"> <%=  todo.name %></a> <p style="font-size:12px"><a href="/todo/<%=todo.id%>/done">One more day</a></p></td>
+
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

@@ -9,4 +9,4 @@ gem "rake"
 gem "sqlite3"
 gem "pry"
 gem 'pg'
-
+heroku buildpacks:set heroku/ruby
