@@ -8,7 +8,6 @@ require "./models/done.rb"
 require "pry"
 
 get '/' do
-  binding.pry
 	redirect '/todo'
 end
 
