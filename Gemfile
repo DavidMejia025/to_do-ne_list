@@ -6,7 +6,5 @@ gem 'json'
 gem 'httparty'
 gem "sinatra-activerecord"
 gem "rake"
-gem "sqlite3"
 gem "pry"
 gem 'pg'
-

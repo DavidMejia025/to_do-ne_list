@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="titles">
+    <h1> [<span style="color:red"><%= @activity.category.name%></span>] - <%= @activity.name %>:</h1>
+    <h3> Llevo <%= @activity.dones.count %> actividades realizadas:</h3>
+  </div>
+    <div class="done_container" style="display:flex;flex-direction:row">
+      <%   @dones_todo.each do  |done_todo| %>
+        <% missing = 0; %>
+        <div class="dones" style="display:flex;flex-direction: column">
+        <% @dones_activity.each do  |done_activity| %>
+          <div class="point" style="margin:5px 5px 0px 5px">
+            <% if done_todo.created_at.day == done_activity.created_at.day %>
+             <div style="background-color: #286090; height:50px; width: 80px;margin-left:20px">
+                <% missing += 1 %>
+             </div>
+            <% else %>
+             
+            <% end %>
+          </div> 
+        <% end %>
+        <% if missing == 0 %>
+          <div style=" height:50px">
+            </div>
+        <% end %>
+        <div class="date" style="margin:20px">
+          <p> <%= done_todo.created_at.year %>-<%= done_todo.created_at.month %>-<%= done_todo.created_at.day%></p>
+        </div>
+        </div> 
+      <% end %>
+    </div>
+</div>  
