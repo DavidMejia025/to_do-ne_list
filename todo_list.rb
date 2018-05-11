@@ -25,6 +25,7 @@ end
 get '/todo/:id' do 
 	@todo = ToDo.find(params[:id]) 
   @activities = @todo.activities
+  @categories = Category.where(to_do_id: @todo.id)
 	erb :show
 end
 
