@@ -37,3 +37,8 @@ width: 360px;
 .date{
   margin:20px !important;
 }
+
+.container_to_do{
+  margin: 100px; 
+  width: 50px;
+}
