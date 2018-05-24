@@ -5,6 +5,7 @@ require "./models/category.rb"
 require "./models/calendar.rb"
 require "./models/todo.rb"
 require "./models/done.rb"
+require "./helpers/summary_day_helper.rb"
 require "pry"
 
 get '/' do
@@ -72,3 +73,14 @@ get '/todo/activity/delete/:id' do
     @activity.destroy
     redirect "/todo/#{todo.id}"
 end
+
+get '/todo/activity/edit' do
+  @todo = ToDo.all
+  erb :edit
+end
+
+# post '/todo/summary_by_day' do
+#     @todo = ToDo.all
+#     @activities = activities_by_day(params[:day])
+#     erb  :summary_by_day
+# end
